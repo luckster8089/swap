@@ -6,6 +6,13 @@ export default class UserModel {
     static show (userId) {
       return fetch(`${REACT_APP_API_URL}/users/${userId}`).then(res => res.json())
     }
+
+    static delete (userId) {
+      return fetch(`${REACT_APP_API_URL}/users/${userId}`, {
+          method: "DELETE",
+          credentials: 'include'
+        })
+      }
     
 
     static create(data) {
@@ -30,12 +37,10 @@ export default class UserModel {
     }
   
     static logout() {
-      // TODO: complete this function
       return fetch(`${REACT_APP_API_URL}/auth/logout`, {
         method: "DELETE",
         credentials: 'include'
       })
-      // Remember to add authorization headers
     }
   }
   
