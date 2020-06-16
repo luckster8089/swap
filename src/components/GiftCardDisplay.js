@@ -46,7 +46,6 @@ const GiftCardDisplay = ({ handleSubmit, deletegc, giftCardId,  messages, firstN
 <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
-        
           className={classes.media}
           image={giftcardBackground}
           title="gift card show"
