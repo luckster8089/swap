@@ -1,5 +1,5 @@
 import axios from 'axios'
-const url = `http://localhost:3001/api/v1`
+const url = `https://serene-waters-63279.herokuapp.com`
 
 class GiftCardModel {
   static all = () => {
