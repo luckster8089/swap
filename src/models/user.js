@@ -1,4 +1,4 @@
-const REACT_APP_API_URL = "https://serene-waters-63279.herokuapp.com/"
+const REACT_APP_API_URL = "https://serene-waters-63279.herokuapp.com"
 
 
 export default class UserModel {
