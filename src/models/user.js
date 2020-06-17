@@ -1,4 +1,5 @@
-const REACT_APP_API_URL = "https://serene-waters-63279.herokuapp.com"
+import axios from 'axios'
+const REACT_APP_API_URL = "http://localhost:3001/api/v1"
 
 
 export default class UserModel {
@@ -15,15 +16,10 @@ export default class UserModel {
       }
     
 
-    static create(data) {
-      return fetch(`${REACT_APP_API_URL}/auth/register`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      }).then(res => res.json())
-    }
+      static create(data) {
+        const request = axios.post(`${process.env.REACT_APP_API_URL}/register`, data);
+        return request;
+      }
     
     static login(credentials) {
       return fetch(`${REACT_APP_API_URL}/auth/login`, {
